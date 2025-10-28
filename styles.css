@@ -1,32 +1,36 @@
 /* Toàn bộ nền và font */
-body {
-    background-color: #1a1a1a; /* nền đen mềm, để tôn chữ hồng */
-    color: #ffb7c5; /* màu anh đào nhạt */
-    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+body, .stApp {
+    background-color: #1a1a1a !important; /* nền đen mềm */
+    color: #ffb7c5 !important; /* chữ anh đào */
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif !important;
     text-align: center;
-    padding-top: 50px;
+    padding: 40px 20px 60px 20px;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 /* Tiêu đề lớn */
 .title {
-    color: #ffc2cc; /* hồng nhạt hơn, dễ nhìn */
-    font-size: 28px;
+    color: #ffc2cc !important;
+    font-size: 26px;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    margin-bottom: 30px;
+    letter-spacing: 0.4px;
+    margin-bottom: 25px;
     animation: fadeInDown 2s ease-out;
 }
 
 /* Hiệu ứng xuất hiện từng dòng */
 .fade-in {
     opacity: 0;
-    font-size: 20px;
-    margin: 20px auto;
-    max-width: 80%;
+    color: #ffb7c5 !important; /* bắt buộc áp dụng */
+    font-size: 18px;
+    margin: 18px auto;
+    max-width: 90%;
+    line-height: 1.5;
     animation: fadeInUp 2s ease forwards;
 }
 
-/* Hiệu ứng bóng nhẹ */
+/* Khi bôi chọn */
 .fade-in::selection {
     background-color: #ffdae0;
     color: #1a1a1a;
@@ -36,7 +40,7 @@ body {
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(15px);
     }
     100% {
         opacity: 1;
@@ -47,7 +51,7 @@ body {
 @keyframes fadeInDown {
     0% {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateY(-8px);
     }
     100% {
         opacity: 1;
@@ -61,11 +65,27 @@ body {
     opacity: 0.8;
 }
 
-/* Tùy chỉnh thanh cuộn trên mobile */
+/* Thanh cuộn (ẩn trên mobile) */
 ::-webkit-scrollbar {
     width: 5px;
 }
 ::-webkit-scrollbar-thumb {
     background: #ffb7c5;
     border-radius: 10px;
+}
+
+/* --- Responsive cho điện thoại --- */
+@media (max-width: 768px) {
+    .title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .fade-in {
+        font-size: 16px;
+        max-width: 95%;
+        margin: 15px auto;
+    }
+    body {
+        padding-top: 30px;
+    }
 }
