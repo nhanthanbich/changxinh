@@ -17,13 +17,13 @@ st.markdown("<p>Phát hiện hoạt động lạ từ thiết bị của bạn..
 time.sleep(2)
 
 # === Nội dung dần chuyển giọng ===
-messages = [
-    "Hôm nay tớ định khen cậu xinh...",
-    "Mà hình như bị bắt bài mất rồi =)))",
-    "Đúng là con người tớ cũng thật thà quá.",
-    "Nhưng nếu dễ đoán thế thì còn gì vui nữa đúng không :))",
+messages = [ 
+    "Hôm nay tớ định khen cậu xinh", 
+    "Thì bị bắt bài =)))", 
+    "Đúng là con người tớ cũng thật thà", 
+    "Nhưng dễ đoán quá thì còn gì bất ngờ phải không :))",
     "Thôi thì để hệ thống tự xử lý vậy.",
-    "",
+    "....",
     "Hệ thống xác định: độ sáng tăng bất thường trên màn hình.",
     "Đang phân tích nguyên nhân...",
     "Nguồn gốc ánh sáng: từ nụ cười của Chang.",
