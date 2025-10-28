@@ -13,7 +13,7 @@ with open("styles.css") as f:
 st.markdown("<h1 class='title'>⚠️ Báo cáo hệ thống bất thường ⚠️</h1>", unsafe_allow_html=True)
 st.write("")
 time.sleep(1.5)
-st.markdown("<p>Phát hiện hoạt động lạ từ thiết bị mang tên <b>Chang</b>...</p>", unsafe_allow_html=True)
+st.markdown("<p>Phát hiện hoạt động lạ từ thiết bị của bạn...</p>", unsafe_allow_html=True)
 time.sleep(2)
 
 # === Nội dung dần chuyển giọng ===
