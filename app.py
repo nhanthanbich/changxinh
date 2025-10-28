@@ -10,7 +10,7 @@ with open("styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # === Giao diện ban đầu ===
-st.markdown("<h1 class='title'>⚠️ Báo cáo hệ thống bất thường ⚠️</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='title'>⚠️ Báo cáo hệ thống bất thường</h1>", unsafe_allow_html=True)
 st.write("")
 time.sleep(1.5)
 st.markdown("<p>Phát hiện hoạt động lạ từ thiết bị của bạn...</p>", unsafe_allow_html=True)
