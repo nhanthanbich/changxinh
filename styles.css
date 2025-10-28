@@ -1,40 +1,71 @@
+/* Toàn bộ nền và font */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Helvetica Neue', sans-serif;
-    background: linear-gradient(135deg, #0f1724, #0b3a4b);
-    color: #e6eef8;
+    background-color: #1a1a1a; /* nền đen mềm, để tôn chữ hồng */
+    color: #ffb7c5; /* màu anh đào nhạt */
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding-top: 50px;
 }
 
-.main-container {
-    max-width: 480px;
-    margin: auto;
-    padding: 16px;
-}
-
+/* Tiêu đề lớn */
 .title {
-    text-align: center;
-    font-size: 2em;
-    color: #fff;
-    margin-top: 24px;
+    color: #ffc2cc; /* hồng nhạt hơn, dễ nhìn */
+    font-size: 28px;
     font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+    animation: fadeInDown 2s ease-out;
 }
 
-.message {
-    text-align: center;
-    font-size: 1.3em;
-    margin: 20px 0;
-    color: #cfe8ff;
-    line-height: 1.4;
+/* Hiệu ứng xuất hiện từng dòng */
+.fade-in {
+    opacity: 0;
+    font-size: 20px;
+    margin: 20px auto;
+    max-width: 80%;
+    animation: fadeInUp 2s ease forwards;
 }
 
-.sub {
-    text-align: center;
-    font-size: 1em;
-    color: #a0c4ff;
+/* Hiệu ứng bóng nhẹ */
+.fade-in::selection {
+    background-color: #ffdae0;
+    color: #1a1a1a;
 }
 
-@media (min-width: 768px) {
-    .title { font-size: 2.8em; }
-    .message { font-size: 1.6em; }
+/* Hiệu ứng chuyển động mượt */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Balloons Streamlit - nhẹ hơn */
+[data-testid="stBalloons"] {
+    filter: hue-rotate(320deg) brightness(1.2);
+    opacity: 0.8;
+}
+
+/* Tùy chỉnh thanh cuộn trên mobile */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #ffb7c5;
+    border-radius: 10px;
 }
