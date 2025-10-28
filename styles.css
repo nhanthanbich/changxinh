@@ -1,42 +1,54 @@
-/* Toàn bộ nền và font */
+/* ========== TOÀN BỘ GIAO DIỆN ========== */
 body, .stApp {
-    background-color: #1a1a1a !important; /* nền đen mềm */
-    color: #ffb7c5 !important; /* chữ anh đào */
+    background-color: #1a1a1a !important;  /* nền đen mịn */
+    color: #ffb7c5 !important;             /* chữ anh đào nhạt */
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif !important;
     text-align: center;
-    padding: 40px 20px 60px 20px;
     margin: 0;
+    padding: 0;
     overflow-x: hidden;
+
+    /* Căn giữa toàn bộ nội dung trên màn hình */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-/* Tiêu đề lớn */
+/* ========== TIÊU ĐỀ ========== */
 .title {
-    color: #ffc2cc !important;
+    color: #ffc2cc !important;             /* hồng sáng hơn một chút */
     font-size: 26px;
     font-weight: 600;
     letter-spacing: 0.4px;
     margin-bottom: 25px;
-    animation: fadeInDown 2s ease-out;
+    animation: fadeInDown 1.6s ease-out;
 }
 
-/* Hiệu ứng xuất hiện từng dòng */
+/* ========== DÒNG TIN NHẮN ========== */
 .fade-in {
     opacity: 0;
-    color: #ffb7c5 !important; /* bắt buộc áp dụng */
+    color: #ffb7c5 !important;
     font-size: 18px;
     margin: 18px auto;
-    max-width: 90%;
-    line-height: 1.5;
+    max-width: 85%;
+    line-height: 1.6;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     animation: fadeInUp 2s ease forwards;
 }
 
-/* Khi bôi chọn */
+/* Hiệu ứng chọn chữ */
 .fade-in::selection {
     background-color: #ffdae0;
     color: #1a1a1a;
 }
 
-/* Hiệu ứng chuyển động mượt */
+/* ========== ANIMATION ========== */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -59,13 +71,13 @@ body, .stApp {
     }
 }
 
-/* Balloons Streamlit - nhẹ hơn */
+/* ========== BALLOONS ========== */
 [data-testid="stBalloons"] {
-    filter: hue-rotate(320deg) brightness(1.2);
-    opacity: 0.8;
+    filter: hue-rotate(320deg) brightness(1.25);
+    opacity: 0.85;
 }
 
-/* Thanh cuộn (ẩn trên mobile) */
+/* ========== THANH CUỘN ========== */
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -74,7 +86,7 @@ body, .stApp {
     border-radius: 10px;
 }
 
-/* --- Responsive cho điện thoại --- */
+/* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 768px) {
     .title {
         font-size: 22px;
@@ -82,10 +94,7 @@ body, .stApp {
     }
     .fade-in {
         font-size: 16px;
-        max-width: 95%;
+        max-width: 92%;
         margin: 15px auto;
-    }
-    body {
-        padding-top: 30px;
     }
 }
